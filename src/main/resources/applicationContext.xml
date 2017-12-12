@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd"
+	xmlns:context="http://www.springframework.org/schema/context">
+
+	<context:property-placeholder location="classpath:application.properties" />
+
+	<bean id="A" name="A" class="tp.xml.MyObject">
+		<property name="id" value="1"></property>
+		<property name="name" value="${vara}"></property>
+	</bean>
+
+	<bean id="B" name="B" class="tp.xml.MyObject">
+		<property name="id" value="2"></property>
+		<property name="name" value="nigo"></property>
+		<property name="parent" ref="A"></property>
+	</bean>
+
+</beans>
