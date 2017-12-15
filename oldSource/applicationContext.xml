@@ -7,12 +7,12 @@ http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springfr
 
 	<context:property-placeholder location="classpath:application.properties" />
 
-	<bean id="A" name="A" class="tp.xml.MyObject">
+	<bean id="A" name="A" class="employee.service.Book">
 		<property name="id" value="1"></property>
 		<property name="name" value="${vara}"></property>
 	</bean>
 
-	<bean id="B" name="B" class="tp.xml.MyObject">
+	<bean id="B" name="B" class="employee.service.Book">
 		<property name="id" value="2"></property>
 		<property name="name" value="nigo"></property>
 		<property name="parent" ref="A"></property>
